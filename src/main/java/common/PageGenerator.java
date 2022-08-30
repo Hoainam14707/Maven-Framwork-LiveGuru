@@ -1,5 +1,15 @@
 package common;
 
-public class PageGenerator {
+import org.openqa.selenium.WebDriver;
+import pageObjects.UserHomePageObject;
+import pageObjects.UserRegisterPageObject;
 
+public class PageGenerator {
+    public static UserHomePageObject getHomePageObject(WebDriver driver) {
+        return new UserHomePageObject(driver);
+    }
+
+    public static UserRegisterPageObject getRegisterPageObject(WebDriver driver) {
+        return new UserRegisterPageObject(driver);
+    }
 }

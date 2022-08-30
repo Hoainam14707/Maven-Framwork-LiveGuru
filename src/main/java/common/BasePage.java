@@ -336,6 +336,26 @@ public class BasePage {
         return explicitWait.until(jQueryLoad) && explicitWait.until(jsLoad);
     }
 
+    public void waitForElementVisible(String locator) {
+        explicitWait = new WebDriverWait(driver, timeout);
+        explicitWait.until(ExpectedConditions.visibilityOfElementLocated(getXpath(locator)));
+    }
+
+    public void waitForAllElementVisible(String locator) {
+        explicitWait = new WebDriverWait(driver, timeout);
+        explicitWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getXpath(locator)));
+    }
+
+    public void waitForElementClickable(String locator) {
+        explicitWait = new WebDriverWait(driver, timeout);
+        explicitWait.until(ExpectedConditions.elementToBeClickable((getXpath(locator))));
+    }
+
+    public void waitForElementInvisible(String locator) {
+        explicitWait = new WebDriverWait(driver, timeout);
+        explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getXpath(locator)));
+    }
+
     public void sleepInSecond(long time) {
         try {
             Thread.sleep(time * 1000);
