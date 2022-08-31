@@ -6,12 +6,32 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
+import pageObjects.UserHomePageObject;
+import pageObjects.UserRegisterPageObject;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
+    protected UserHomePageObject homePage;
+    protected UserRegisterPageObject registerPage;
+
+
+    @Parameters({"browser", "url"})
+    @BeforeTest
+    public void beforeTest(String browserName, String url) {
+        driver = openBrowser(browserName, url);
+        homePage = PageGenerator.getHomePageObject(driver);
+    }
+
+    @AfterTest(alwaysRun = true)
+    public void afterTest() {
+        driver.quit();
+    }
 
     protected WebDriver openBrowser(String browserName, String url) {
         if (browserName.equalsIgnoreCase("FireFox")) {

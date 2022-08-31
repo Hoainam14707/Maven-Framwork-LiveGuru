@@ -10,7 +10,7 @@ public class UserHomePageObject extends BasePage {
 
     public UserHomePageObject(WebDriver driver) {
         super(driver);
-//        this.driver = driver;
+        this.driver = driver;
     }
 
     public void clickToAccountMenu() {
