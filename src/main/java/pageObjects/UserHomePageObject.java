@@ -20,7 +20,7 @@ public class UserHomePageObject extends BasePage {
 
     public UserRegisterPageObject clickToRegisterLink() {
         waitForElementClickable(UserHomePageUI.REGISTER_LINK);
-        clickToElement(UserHomePageUI.ACCOUNT_MENU);
+        clickToElement(UserHomePageUI.REGISTER_LINK);
         return PageGenerator.getRegisterPageObject(driver);
     }
 }

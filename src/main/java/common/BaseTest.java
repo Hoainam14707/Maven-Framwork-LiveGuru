@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
+import pageObjects.UserMyAccountPageObject;
 import pageObjects.UserHomePageObject;
 import pageObjects.UserRegisterPageObject;
 
@@ -19,6 +20,7 @@ public class BaseTest {
     private WebDriver driver;
     protected UserHomePageObject homePage;
     protected UserRegisterPageObject registerPage;
+    protected UserMyAccountPageObject myAccountPage;
 
 
     @Parameters({"browser", "url"})
