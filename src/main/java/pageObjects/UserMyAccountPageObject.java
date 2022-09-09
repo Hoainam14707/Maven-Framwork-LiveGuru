@@ -21,4 +21,9 @@ public class UserMyAccountPageObject extends BasePage {
         waitForElementVisible(String.format(UserMyAccountPageUI.FORM_TEXTBOX_DYNAMIC, title));
         return getAttributeValue(String.format(UserMyAccountPageUI.FORM_TEXTBOX_DYNAMIC, title), attribute);
     }
+
+    public String getTextDashboardHeaderText() {
+        waitForElementVisible(UserMyAccountPageUI.WELCOME_MESSAGE);
+        return getTextElement(UserMyAccountPageUI.WELCOME_MESSAGE);
+    }
 }

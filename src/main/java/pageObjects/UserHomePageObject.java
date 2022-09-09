@@ -18,9 +18,15 @@ public class UserHomePageObject extends BasePage {
         clickToElement(UserHomePageUI.ACCOUNT_MENU);
     }
 
-    public UserRegisterPageObject clickToRegisterLink() {
-        waitForElementClickable(UserHomePageUI.REGISTER_LINK);
-        clickToElement(UserHomePageUI.REGISTER_LINK);
+    public UserRegisterPageObject clickToRegisterLink(String value) {
+        waitForElementClickable(String.format(UserHomePageUI.MENU_LINK, value));
+        clickToElement(String.format(UserHomePageUI.MENU_LINK, value));
         return PageGenerator.getRegisterPageObject(driver);
+    }
+
+    public UserLoginPageObject clickToLoginLink(String value) {
+        waitForElementClickable(String.format(UserHomePageUI.MENU_LINK, value));
+        clickToElement(String.format(UserHomePageUI.MENU_LINK, value));
+        return PageGenerator.getLoginPageObject(driver);
     }
 }

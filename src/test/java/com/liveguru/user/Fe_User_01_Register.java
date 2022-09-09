@@ -14,7 +14,7 @@ public class Fe_User_01_Register extends BaseTest {
     @Test
     public void TC_01_Register_Success() {
         homePage.clickToAccountMenu();
-        registerPage = homePage.clickToRegisterLink();
+        registerPage = homePage.clickToRegisterLink("Register");
 
         registerPage.inputDataToForm("firstname", firstName);
         registerPage.inputDataToForm("lastname", lastName);

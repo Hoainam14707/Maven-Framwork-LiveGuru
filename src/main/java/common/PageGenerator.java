@@ -1,6 +1,7 @@
 package common;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.UserLoginPageObject;
 import pageObjects.UserMyAccountPageObject;
 import pageObjects.UserHomePageObject;
 import pageObjects.UserRegisterPageObject;
@@ -16,5 +17,9 @@ public class PageGenerator {
 
     public static UserMyAccountPageObject getMyAccountPageObject(WebDriver driver) {
         return new UserMyAccountPageObject(driver);
+    }
+
+    public static UserLoginPageObject getLoginPageObject(WebDriver driver) {
+        return new UserLoginPageObject(driver);
     }
 }
