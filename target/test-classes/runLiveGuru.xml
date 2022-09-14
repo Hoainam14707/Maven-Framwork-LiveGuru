@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-  <test name="Test">
+    <test name="Test">
 
-    <parameter name = "browser" value = "chrome" />
-    <parameter name = "url" value = "http://live.techpanda.org/" />
+        <listeners>
+<!--            <listener class-name = "" />-->
+            <listener class-name = "common.ExtentTestListener" />
+        </listeners>
 
-    <classes>
-      <class name="com.liveguru.user.Fe_User_01_Register"/>
-      <class name="com.liveguru.user.Fe_User_01_Login"/>
-    </classes>
-  </test> <!-- Test -->
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="http://live.techpanda.org/"/>
+
+        <classes>
+            <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
+            <!--            <class name="com.liveguru.user.Fe_User_01_Login"/>-->
+            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>
+        </classes>
+    </test> <!-- Test -->
 </suite> <!-- Suite -->

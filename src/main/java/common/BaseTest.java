@@ -9,10 +9,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
-import pageObjects.UserLoginPageObject;
-import pageObjects.UserMyAccountPageObject;
-import pageObjects.UserHomePageObject;
-import pageObjects.UserRegisterPageObject;
+import pageObjects.*;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -23,6 +20,12 @@ public class BaseTest {
     protected UserRegisterPageObject registerPage;
     protected UserMyAccountPageObject myAccountPage;
     protected UserLoginPageObject loginPage;
+    protected UserMobileTabPage mobileTabPage;
+    protected UserProductDetailPage productDetailPage;
+
+    public WebDriver getDriver() {
+        return this.driver;
+    }
 
 
     @Parameters({"browser", "url"})

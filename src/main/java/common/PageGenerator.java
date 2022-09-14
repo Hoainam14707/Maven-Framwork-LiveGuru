@@ -1,10 +1,7 @@
 package common;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.UserLoginPageObject;
-import pageObjects.UserMyAccountPageObject;
-import pageObjects.UserHomePageObject;
-import pageObjects.UserRegisterPageObject;
+import pageObjects.*;
 
 public class PageGenerator {
     public static UserHomePageObject getHomePageObject(WebDriver driver) {
@@ -21,5 +18,13 @@ public class PageGenerator {
 
     public static UserLoginPageObject getLoginPageObject(WebDriver driver) {
         return new UserLoginPageObject(driver);
+    }
+
+    public static UserMobileTabPage getMobileTabPage(WebDriver driver) {
+        return new UserMobileTabPage(driver);
+    }
+
+    public static UserProductDetailPage getProductDetailPage(WebDriver driver) {
+        return new UserProductDetailPage(driver);
     }
 }

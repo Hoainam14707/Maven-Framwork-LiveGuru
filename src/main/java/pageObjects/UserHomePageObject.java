@@ -29,4 +29,10 @@ public class UserHomePageObject extends BasePage {
         clickToElement(String.format(UserHomePageUI.MENU_LINK, value));
         return PageGenerator.getLoginPageObject(driver);
     }
+
+    public UserMobileTabPage clickToMenuTab(String nameTab) {
+        waitForElementVisible(String.format(UserHomePageUI.MENU_TAB, nameTab));
+        clickToElement(String.format(UserHomePageUI.MENU_TAB, nameTab));
+        return PageGenerator.getMobileTabPage(driver);
+    }
 }
