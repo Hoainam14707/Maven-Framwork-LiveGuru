@@ -27,4 +27,8 @@ public class PageGenerator {
     public static UserProductDetailPage getProductDetailPage(WebDriver driver) {
         return new UserProductDetailPage(driver);
     }
+
+    public static UserShoppingCartPageObject getShoppingCartPage(WebDriver driver) {
+        return new UserShoppingCartPageObject(driver);
+    }
 }

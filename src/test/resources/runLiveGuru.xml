@@ -13,7 +13,8 @@
         <classes>
             <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
             <!--            <class name="com.liveguru.user.Fe_User_01_Login"/>-->
-            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>
+<!--            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>-->
+            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product" />
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

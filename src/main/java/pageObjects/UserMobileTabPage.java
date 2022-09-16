@@ -23,4 +23,9 @@ public class UserMobileTabPage extends BasePage {
         clickToElement(String.format(UserMobileTabUI.PRODUCT_NAME,productName));
         return PageGenerator.getProductDetailPage(driver);
     }
+
+    public UserShoppingCartPageObject clickAddToCartButton(String productName) {
+        clickToElement(String.format(UserMobileTabUI.ADD_TO_CART_BUTTON, productName));
+        return PageGenerator.getShoppingCartPage(driver);
+    }
 }
