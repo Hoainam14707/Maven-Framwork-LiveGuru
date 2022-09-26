@@ -3,7 +3,6 @@
     <test name="Test">
 
         <listeners>
-<!--            <listener class-name = "" />-->
             <listener class-name = "common.ExtentTestListener" />
         </listeners>
 
@@ -14,7 +13,8 @@
             <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
             <!--            <class name="com.liveguru.user.Fe_User_01_Login"/>-->
 <!--            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>-->
-            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product" />
+<!--            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product" />-->
+            <class name="com.liveguru.product.Fe_User_Able_To_Compare_Two_Products" />
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
