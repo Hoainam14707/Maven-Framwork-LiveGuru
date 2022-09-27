@@ -24,6 +24,10 @@ public class PageGenerator {
         return new UserMobileTabPage(driver);
     }
 
+    public static UserTVTabPage getTVTabPage(WebDriver driver) {
+        return new UserTVTabPage(driver);
+    }
+
     public static UserProductDetailPage getProductDetailPage(WebDriver driver) {
         return new UserProductDetailPage(driver);
     }

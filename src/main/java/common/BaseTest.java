@@ -23,6 +23,7 @@ public class BaseTest {
     protected UserMobileTabPage mobileTabPage;
     protected UserProductDetailPage productDetailPage;
     protected UserShoppingCartPageObject shoppingCartPage;
+    protected UserTVTabPage TVTabPage;
 
     public WebDriver getDriver() {
         return this.driver;

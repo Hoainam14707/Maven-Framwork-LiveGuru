@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.UserMobileTabPage;
+import pageObjects.UserTVTabPage;
 
 import java.util.List;
 import java.util.Set;
@@ -362,5 +364,17 @@ public class BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public UserMobileTabPage clickToMobileMenuTab() {
+        waitForElementClickable(BasePageUI.MENU_MOBILE_TAB);
+        clickToElement(BasePageUI.MENU_MOBILE_TAB);
+        return PageGenerator.getMobileTabPage(driver);
+    }
+
+    public UserTVTabPage clickToTVMenuTab() {
+        waitForElementClickable(BasePageUI.MENU_TV_TAB);
+        clickToElement(BasePageUI.MENU_TV_TAB);
+        return PageGenerator.getTVTabPage(driver);
     }
 }
