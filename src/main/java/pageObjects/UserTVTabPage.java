@@ -18,4 +18,10 @@ public class UserTVTabPage extends BasePage {
         clickToElement(String.format(UserTVTabUI.ADD_TO_WISHLIST_LINK, productName));
         return PageGenerator.getMyAccountPageObject(driver);
     }
+
+    public UserProductDetailPage clickToProductDetail(String productName) {
+        waitForElementClickable(String.format(UserTVTabUI.PRODUCT_NAME, productName));
+        clickToElement(String.format(UserTVTabUI.PRODUCT_NAME, productName));
+        return PageGenerator.getProductDetailPage(driver);
+    }
 }

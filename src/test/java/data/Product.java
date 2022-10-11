@@ -7,6 +7,7 @@ public class Product {
 
     //TV
     public static final String TV_LG_LCD = "LG LCD";
+    public static final String TV_SAMSUNG_LCD = "Samsung LCD";
 
 
 }
