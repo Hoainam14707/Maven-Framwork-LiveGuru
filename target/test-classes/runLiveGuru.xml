@@ -3,7 +3,7 @@
     <test name="Test">
 
         <listeners>
-            <listener class-name = "common.ExtentTestListener" />
+            <listener class-name="common.ExtentTestListener"/>
         </listeners>
 
         <parameter name="browser" value="chrome"/>
@@ -12,11 +12,12 @@
         <classes>
             <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
             <!--            <class name="com.liveguru.user.Fe_User_01_Login"/>-->
-<!--            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>-->
-<!--            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product" />-->
-<!--            <class name="com.liveguru.product.Fe_User_Able_To_Compare_Two_Products" />-->
-<!--            <class name="com.liveguru.product.Fe_User_Share_Wishlist_To_Other_People_Using_Email" />-->
-            <class name="com.liveguru.product.Fe_User_Add_Your_Review" />
+            <!--            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>-->
+            <!--            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product" />-->
+            <!--            <class name="com.liveguru.product.Fe_User_Able_To_Compare_Two_Products" />-->
+            <!--            <class name="com.liveguru.product.Fe_User_Share_Wishlist_To_Other_People_Using_Email" />-->
+            <!--            <class name="com.liveguru.product.Fe_User_Add_Your_Review"/>-->
+            <class name="com.liveguru.product.Fe_User_Search_Functionality"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

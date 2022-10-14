@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.CatalogAdvancedSearchPage;
 import pageObjects.UserMobileTabPage;
 import pageObjects.UserTVTabPage;
 
@@ -19,7 +20,7 @@ public class BasePage {
     Select select;
     JavascriptExecutor jsExecutor;
     private WebDriverWait explicitWait;
-    long timeout;
+    long timeout = 30;
     private Color color;
     private Actions action;
 
@@ -134,6 +135,7 @@ public class BasePage {
     }
 
     protected void sendKeyToElement(String locator, String value) {
+        getElement(locator).clear();
         getElement(locator).sendKeys(value);
     }
 
@@ -376,5 +378,11 @@ public class BasePage {
         waitForElementClickable(BasePageUI.MENU_TV_TAB);
         clickToElement(BasePageUI.MENU_TV_TAB);
         return PageGenerator.getTVTabPage(driver);
+    }
+
+    public CatalogAdvancedSearchPage clickToAdvancedSearch(String nameLink) {
+        waitForElementClickable(String.format(BasePageUI.DYNAMIC_FOOTER_LINK, nameLink));
+        clickToElement(String.format(BasePageUI.DYNAMIC_FOOTER_LINK, nameLink));
+        return  PageGenerator.getCatalogAdvancedSearchPage(driver);
     }
 }

@@ -24,6 +24,7 @@ public class BaseTest {
     protected UserProductDetailPage productDetailPage;
     protected UserShoppingCartPageObject shoppingCartPage;
     protected UserTVTabPage TVTabPage;
+    protected CatalogAdvancedSearchPage advancedSearchPage;
 
     public WebDriver getDriver() {
         return this.driver;

@@ -35,4 +35,8 @@ public class PageGenerator {
     public static UserShoppingCartPageObject getShoppingCartPage(WebDriver driver) {
         return new UserShoppingCartPageObject(driver);
     }
+
+    public static CatalogAdvancedSearchPage getCatalogAdvancedSearchPage(WebDriver driver) {
+        return new CatalogAdvancedSearchPage(driver);
+    }
 }
