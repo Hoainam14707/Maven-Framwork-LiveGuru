@@ -39,4 +39,12 @@ public class PageGenerator {
     public static CatalogAdvancedSearchPage getCatalogAdvancedSearchPage(WebDriver driver) {
         return new CatalogAdvancedSearchPage(driver);
     }
+
+    public static BEHomePageObject getBEHomePage (WebDriver driver) {
+        return new BEHomePageObject(driver);
+    }
+
+    public static BELoginPageObject getBELoginPage (WebDriver driver) {
+        return new BELoginPageObject(driver);
+    }
 }

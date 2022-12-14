@@ -25,6 +25,8 @@ public class BaseTest {
     protected UserShoppingCartPageObject shoppingCartPage;
     protected UserTVTabPage TVTabPage;
     protected CatalogAdvancedSearchPage advancedSearchPage;
+    protected BEHomePageObject beHomePage;
+    protected BELoginPageObject beLoginPage;
 
     public WebDriver getDriver() {
         return this.driver;
@@ -72,5 +74,15 @@ public class BaseTest {
     public int getRandomNumber() {
         Random rand = new Random();
         return rand.nextInt(9999);
+    }
+
+    public UserHomePageObject goToFEHomePage() {
+        driver.get(GlobalConstant.URL_FE);
+        return new UserHomePageObject(driver);
+    }
+
+    public BELoginPageObject goToBELoginPage() {
+        driver.get(GlobalConstant.URL_BE);
+        return new BELoginPageObject(driver);
     }
 }

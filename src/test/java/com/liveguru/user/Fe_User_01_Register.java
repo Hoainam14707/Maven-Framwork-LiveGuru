@@ -15,7 +15,7 @@ public class Fe_User_01_Register extends BaseTest {
     private String password = "123456";
     private String confirmPassword = password;
 
-    @Test
+    @Test (retryAnalyzer = common.Retry.class)
     public void TC_01_Register_Success(Method method) {
         ExtentTestManager.startTest(method.getName(), "Register Successfully");
         ExtentTestManager.getTest().log(Status.INFO, "Step 02: Click to Account Menu");
@@ -33,7 +33,7 @@ public class Fe_User_01_Register extends BaseTest {
 
         ExtentTestManager.getTest().log(Status.INFO, "Step 05: Click 'Register' button ");
         myAccountPage = registerPage.clickToRegisterButton();
-        Assert.assertTrue(registerPage.verifyUserRegisterSuccess());
+        Assert.assertFalse(registerPage.verifyUserRegisterSuccess());
     }
 
     @Test(dependsOnMethods = "TC_01_Register_Success")

@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-    <test name="Test">
+    <listeners>
+        <listener class-name="common.ExtentTestListener"/>
+<!--        <listener class-name="common.Listener"/>-->
+        <listener class-name="common.AnnotationTransformer"/>
+    </listeners>
 
-        <listeners>
-            <listener class-name="common.ExtentTestListener"/>
-        </listeners>
-
+    <test name="Test FE">
         <parameter name="browser" value="chrome"/>
         <parameter name="url" value="http://live.techpanda.org/"/>
 
         <classes>
-            <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
+                        <!-- <class name="com.liveguru.user.Fe_User_01_Register"/>-->
+                        <class name="com.liveguru.product.test"/>
             <!--            <class name="com.liveguru.user.Fe_User_01_Login"/>-->
             <!--            <class name="com.liveguru.product.Fe_User_Cost_Of_Product_In_List_and_Detail_Page"/>-->
-            <!--            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product" />-->
-            <!--            <class name="com.liveguru.product.Fe_User_Able_To_Compare_Two_Products" />-->
-            <!--            <class name="com.liveguru.product.Fe_User_Share_Wishlist_To_Other_People_Using_Email" />-->
+            <!--            <class name="com.liveguru.product.Fe_User_Cant_Add_More_500_Item_Of_Product"/>-->
+            <!--            <class name="com.liveguru.product.Fe_User_Able_To_Compare_Two_Products"/>-->
+<!--                        <class name="com.liveguru.product.Fe_User_Share_Wishlist_To_Other_People_Using_Email"/>-->
             <!--            <class name="com.liveguru.product.Fe_User_Add_Your_Review"/>-->
-            <class name="com.liveguru.product.Fe_User_Search_Functionality"/>
+            <!--            <class name="com.liveguru.product.Fe_User_Search_Functionality"/>-->
+            <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
+<!--            <class name="com.liveguru.user.Be_User_Check_Account"/>&ndash;&gt;-->
         </classes>
     </test> <!-- Test -->
+
+    <!--    <test name="Test BE">-->
+    <!--        <parameter name="browser" value="chrome"/>-->
+    <!--        <parameter name="url" value="http://live.techpanda.org/index.php/backendlogin"/>-->
+
+    <!--        <classes>-->
+    <!--            <class name="com.liveguru.user.Fe_User_01_Register"/>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+
 </suite> <!-- Suite -->

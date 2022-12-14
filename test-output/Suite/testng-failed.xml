@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="common.ExtentTestListener"/>
+    <listener class-name="common.AnnotationTransformer"/>
+  </listeners>
+  <test thread-count="5" name="Test FE(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="http://live.techpanda.org/"/>
+    <classes>
+      <class name="com.liveguru.product.test">
+        <methods>
+          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.liveguru.product.test -->
+    </classes>
+  </test> <!-- Test FE(failed) -->
+</suite> <!-- Failed suite [Suite] -->
